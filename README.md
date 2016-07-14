@@ -2,13 +2,16 @@
 
 A browser-based take on the classic boardgame, battleship.js is a project that I worked on for fun to learn javascript and jQuery. Enjoy! 
 
-## Getting Started
+## Things to Do:
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-### Prerequisities
 
-What things you need to install the software and how to install them
+<ul> ### Bugs to fix:
+	<li> make cells with the 'miss' class display 'miss' css styles</li>
+	<li> prevent cells from have multiple instances of the 'miss' or 'hit' class</li>
+</ul>
+
 
 ```
 Give examples
@@ -32,35 +35,14 @@ until finished
 
 End with an example of getting some data out of the system or using it for a little demo
 
-## Running the tests
 
-Explain how to run the automated tests for this system
 
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Visit <a href="www.google.com"> this website </a> to check out this program.
+Visit <a target="_blank" href="http://www.google.com"> this website </a> to check out this program.
 
 ## Built With
 
 * Jquery - javascript library
-* Maven - Maybe
-* Atom - ergaerga
+
 
 ## Contributing
 
