@@ -2,9 +2,13 @@
 
 A browser-based take on the classic boardgame, battleship.js is a project that I worked on for fun to learn javascript and jQuery. Enjoy! 
 
+## Play the game
+
+Visit <a target="_blank" href="https://thechutrain.github.io/battleship.js/battleship.html"> this website </a> to check out this program.
+
 ## Things to Do:
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+There are a lot of things to do to make this project even better. I've divided the work into bugs to fix and addition work, which tend to be more of code writing.
 
 ### Bugs to fix:
 <ol>
@@ -31,19 +35,9 @@ These instructions will get you a copy of the project up and running on your loc
 </ul>
 
 
-
-
-
-Visit <a target="_blank" href="http://www.google.com"> this website </a> to check out this program.
-
 ## Built With
 
 * Jquery - javascript library
-
-
-## Contributing
-
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 
 ## Authors
