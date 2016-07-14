@@ -21,6 +21,9 @@ There are a lot of things to do to make this project even better. I've divided t
 
 ### Additional work:
 <ul>
+	<li>!! Make is mobile-responsive!!</li><ol>
+		<li> add event listeners for touch</li>
+	</ol>
 	<li> Retouch up the design </li>
 	<li>write a game over function <ol>
 		<li> alert user when all ships are sunk </li>
