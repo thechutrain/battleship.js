@@ -7,6 +7,9 @@ $(document).ready(function(){
 	// $("button").on('click', "#new_game", model.initializeGame);
 	$(".button-wrapper").on('click', "#new_game", model.initializeGame);
 
+	// Warning in console:
+	console.log("%cHey no cheating!","color: red; font-size:15px;");
+
 
 })
 
@@ -56,29 +59,15 @@ var model = {
 	// Methods
 	initializeGame: function(){
 	// clear all classes:
-		// get all cells with misses
-		// var all_misses = $(".miss");
-		// Need to get the child element and remove
 		$(".miss").children(".cross").remove();
 		$(".miss").removeClass("miss");
 		$(".hit").removeClass("hit");
 		$(".sunk").removeClass("sunk");
 
-
-		// alert(all_misses);
-		// $.each(all_misses, function(index, value){
-			// all_misses[index].removeClass("miss");
-			// value.removeClass("miss");
-		// })
-
-		// alert(test);
-		//get all cells with hits
-		// .hasClass("miss").removeClass(".miss");
 	// clear the model variables:
 		model.ship_container = [];
 		model.invalid_locations = [];
 		// starts new game:
-		alert("new game");
 		var boats_to_make = [[2, "patrol"], [3,"submarine"], [3, "destroyer"], [4, "battleship"], [5, "carrier"]];
 		for (var i = 0; i < boats_to_make.length; i++) {
 			var length = boats_to_make[i][0];
