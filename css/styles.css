@@ -1,0 +1,191 @@
+
+/* font-styles
+------------------------*/
+body{
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+/* FLEX-BOXES
+------------------------------------------------------------------*/
+.container{
+    display: flex;
+    flex-wrap: nowrap;
+/*    margin-left: 10px;
+    margin-right: 10px;*/
+}
+
+/* HEADER
+------------------------*/
+.header{
+    background-color: #8aded5;
+    width: 100%;
+}
+
+#model{
+    display: none;
+}
+
+/* BOARD
+------------------------*/
+.board{
+    background-color: #f6f8f9;
+    flex-grow: 6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 5px;
+    /*margin-right: 20px;*/
+/*    flex-direction: column;
+    justify-content: center;*/
+}
+
+.grid-container {
+    border: solid 4px;
+    height: 520px;
+    width: 520px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px; /* future proofing */
+    -khtml-border-radius: 10px; /* for old Konqueror browsers */
+    background-color: #1C0CF7;
+}
+
+.grid-cell {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #1C0CF7;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; /* future proofing */
+    -khtml-border-radius: 5px; /* for old Konqueror browsers */
+    float: left;
+    background-color: #0C71F7;
+}
+
+.button-wrapper{
+
+}
+
+#new_game{
+    margin-top: 30px;
+    margin-left: 218px;
+    border: 2px solid;
+    padding: 10px;
+    border-radius: 5px;
+}
+}
+
+/*[data-y="9"]{
+    background-color: red;
+
+}*/
+
+
+/* Miss & Hit Classes
+------------------------*/
+.miss {
+    background-color: white;
+    position: relative;
+    /*background: url(../images/cross.png) no-repeat center center fixed; */
+/*  -webkit-background-size: 45px;
+  -moz-background-size: 45px;
+  -o-background-size: 45px;
+  background-size: 45px;*/
+}
+
+.cross{
+    width: 46px;
+    height: 46px;
+    margin: 2px;
+    background-color: green;
+    background: url(../images/cross.png);
+    background-size: contain;
+    /*margin-left:;*/
+}
+
+
+.hit {
+    background-color: red;
+}
+
+
+/* PLAYER1
+------------------------*/
+#player1{
+    /*background-color: #8a93de;*/
+}
+
+/* flex-boxes
+------------------------*/
+
+/* PLAYER2
+------------------------*/
+#player2{
+    /*background-color: #8adeab;*/
+}
+
+/* ASIDE
+------------------------*/
+.aside-left{
+    min-height:700px;
+    background-color: #8a93de;
+    border: dashed 3px;
+    margin-left: 25px;
+    margin-right: 10px;
+    padding: 10px;
+
+}
+
+/*.aside-right{
+    flex-grow: 1;
+    min-height:700px;
+    background-color: #8a93de;
+    border: dashed 3px;
+    margin-right: 25px;
+    margin-left: 10px;
+
+}*/
+
+.aside-wrapper {
+    background-color: #f6f8f9;
+    flex-grow: 1;
+}
+
+.game-status{
+
+}
+
+.boat{
+    margin: 10px;
+    border: solid 1px;
+    padding: 5px;
+    text-align: center;
+}
+
+.highlight_boat{
+    background-color: red;
+    /*text-decoration: line-through;*/
+}
+
+.sunk {
+/*  font-size: em;
+  line-height: 1em;*/
+  position: relative;
+}
+
+.sunk::after {
+  border-bottom: 0.125em solid red;
+  content: "";
+  left: 15px;
+  margin-top: calc(0.125em / 2 * -1);
+  position: absolute;
+  right: 15px;
+  top: 50%;
+}
+
+/* FOOTER
+------------------------*/
+.footer{
+    background-color: #93de8a;
+    width: 100%;
+}
