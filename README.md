@@ -18,6 +18,16 @@ These instructions will get you a copy of the project up and running on your loc
 ### Additional work:
 <ul>
 	<li> Retouch up the design </li>
+	<li> <ol>write a game over function
+		<li> alert user when all ships are sunk </li>
+		<li> freeze button clicking </li>
+	</ol></li>
+
+	<li> <ol>Add user data to the game
+		<li> keep tracks of number of guess </li>
+		<li> keep track of number of wins/ rounds</li>
+		</ol>
+	</li>
 </ul>
 
 
