@@ -75,8 +75,8 @@ var model = {
 		//get all cells with hits
 		// .hasClass("miss").removeClass(".miss");
 	// clear the model variables:
-		this.ship_container = [];
-		invalid_locations: [];
+		model.ship_container = [];
+		model.invalid_locations = [];
 		// starts new game:
 		alert("new game");
 		var boats_to_make = [[2, "patrol"], [3,"submarine"], [3, "destroyer"], [4, "battleship"], [5, "carrier"]];

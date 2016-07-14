@@ -11,6 +11,7 @@ These instructions will get you a copy of the project up and running on your loc
 	<li> make cells with the 'miss' class display 'miss' css styles</li>
 	<li><strike>prevent cells from have multiple instances of the 'miss' or 'hit' class</strike></li>
 	<li> fix the links in this read me file</li>
+	<li><strike>pinitialize new game does not reset ship_container, just keeps added a new set of ships</strike></li>
 </ol>
 
 
