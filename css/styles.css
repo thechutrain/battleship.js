@@ -60,6 +60,7 @@ body{
     -khtml-border-radius: 5px; /* for old Konqueror browsers */
     float: left;
     background-color: #0C71F7;
+    /*z-index: 1;*/
 }
 
 .button-wrapper{
@@ -86,6 +87,7 @@ body{
 .miss {
     background-color: white;
     position: relative;
+    /*z-index: 2;*/
     /*background: url(../images/cross.png) no-repeat center center fixed; */
 /*  -webkit-background-size: 45px;
   -moz-background-size: 45px;
@@ -97,9 +99,11 @@ body{
     width: 46px;
     height: 46px;
     margin: 2px;
-    background-color: green;
+    background-color: white;
     background: url(../images/cross.png);
     background-size: contain;
+    /*overflow: hidden;*/
+    /*z-index: 3;*/
     /*margin-left:;*/
 }
 

@@ -7,11 +7,11 @@ A browser-based take on the classic boardgame, battleship.js is a project that I
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Bugs to fix:
-<ul>
+<ol>
 	<li> make cells with the 'miss' class display 'miss' css styles</li>
-	<li> prevent cells from have multiple instances of the 'miss' or 'hit' class</li>
+	<li><strike>prevent cells from have multiple instances of the 'miss' or 'hit' class</strike></li>
 	<li> fix the links in this read me file</li>
-</ul>
+</ol>
 
 
 ### Things to make:

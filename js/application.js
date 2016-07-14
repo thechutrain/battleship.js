@@ -274,12 +274,14 @@ var controller = {
 			// cell.addClass("hit");
 			view.displayHit([guess_x, guess_y]);
 		} else {
+			if (cell.hasClass("miss")){
+				alert("That was already a miss!");
+			} else{
 			// view.displayMiss([guess_x, guess_y]);
 			cell.addClass("miss");
 			var x = $('<div class="cross"></div>');
-			// var x = $('<img src="images/cross.png"');
-
 			cell.prepend(x);
+			}
 		}
 
 		// Check the model to see if any boats are sunk
