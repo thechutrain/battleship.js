@@ -1,11 +1,15 @@
 $(document).ready(function(){
-	// initialize the game
+// initialize the game
 	model.initializeGame();
-	// set up the event listeners for all the cells
+// set up the event listeners for all the cells
 	controller.fire_eventListener();
-	// event listener for the new game button
+// event listener for the new game button
 	// $("button").on('click', "#new_game", model.initializeGame);
 	$(".button-wrapper").on('click', "#new_game", model.initializeGame);
+
+// testing
+	// var game_status = model.gameOver();
+	// alert(game_status);
 
 	// Warning in console:
 	console.log("%cHey no cheating!","color: red; font-size:15px;");
@@ -218,6 +222,17 @@ var model = {
 		return isSunk;
 	},
 
+	gameOver: function(){
+		var gameOver = true;
+		var all_ships = this.ship_container;
+		for (var i = 0; i < all_ships.length; i++) {
+			var ship = all_ships[i]
+			if (ship.isSunk == false){
+				gameOver = false;
+			}
+		};
+		return gameOver;
+	},
 
 }
 
@@ -237,44 +252,55 @@ var controller = {
 	},
 
 	fire: function(location, cell){
-		var guess_x = location[0];
-		var guess_y = location[1];
-		var hit = false;
-		// loop through each ship within the container:
-		var all_ships = model.ship_container;
-		for (var j=0; j< all_ships.length; j++){
-			var ship = model.ship_container[j];
-			for (var i=0; i<ship.shipLength; i++){
-				var ship_x = ship.shipLocations[i][0];
-				var ship_y = ship.shipLocations[i][1];
-				// alert(typeof(ship_x) + ", " + ship_y);
-				// alert(ship.shipLocations[i]);
-				if (guess_x == ship_x && guess_y == ship_y){
-					hit = true;
-					ship.shipHits[i] = "hit";
-				}
-		}
+		// first check that the game is not over!
+		if (model.gameOver()){
+			alert("You already won!");
 
-
-		}
-		
-		// check the hit variable to see if ship was hit!
-		if (hit){
-			// cell.addClass("hit");
-			view.displayHit([guess_x, guess_y]);
-		} else {
-			if (cell.hasClass("miss")){
-				alert("That was already a miss!");
-			} else{
-			// view.displayMiss([guess_x, guess_y]);
-			cell.addClass("miss");
-			var x = $('<div class="cross"></div>');
-			cell.prepend(x);
+		} else{
+			var guess_x = location[0];
+			var guess_y = location[1];
+			var hit = false;
+			// loop through each ship within the container:
+			var all_ships = model.ship_container;
+			for (var j=0; j< all_ships.length; j++){
+				var ship = model.ship_container[j];
+				for (var i=0; i<ship.shipLength; i++){
+					var ship_x = ship.shipLocations[i][0];
+					var ship_y = ship.shipLocations[i][1];
+					// alert(typeof(ship_x) + ", " + ship_y);
+					// alert(ship.shipLocations[i]);
+					if (guess_x == ship_x && guess_y == ship_y){
+						hit = true;
+						ship.shipHits[i] = "hit";
+					}
 			}
-		}
 
-		// Check the model to see if any boats are sunk
-		model.isSunk();
+
+			}
+			
+			// check the hit variable to see if ship was hit!
+			if (hit){
+				// cell.addClass("hit");
+				view.displayHit([guess_x, guess_y]);
+			} else {
+				if (cell.hasClass("miss")){
+					alert("That was already a miss!");
+				} else{
+				// view.displayMiss([guess_x, guess_y]);
+				cell.addClass("miss");
+				var x = $('<div class="cross"></div>');
+				cell.prepend(x);
+				}
+			}
+
+			// Check the model to see if any boats are sunk
+			model.isSunk();
+			if (model.gameOver()){
+				alert("You won!");
+
+			} 
+		} // closes the else statement
+
 	}, 
 
 };

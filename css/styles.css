@@ -28,7 +28,8 @@ body{
 /* BOARD
 ------------------------*/
 .board{
-    background-color: #f6f8f9;
+    /*background-color: #f6f8f9;*/
+    background-color: #2F4F4F;
     flex-grow: 6;
     display: flex;
     justify-content: center;
@@ -37,7 +38,7 @@ body{
 }
 
 .grid-container {
-    border: solid 4px;
+    border: solid 4px #1C0CF7;
     height: 520px;
     width: 520px;
     -moz-border-radius: 10px;
@@ -70,6 +71,11 @@ body{
     border: 2px solid;
     padding: 10px;
     border-radius: 5px;
+    background-color: wheat;
+}
+
+#new_game:hover{
+    background-color: goldenrod;
 }
 
 

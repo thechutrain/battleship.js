@@ -21,7 +21,7 @@ There are a lot of things to do to make this project even better. I've divided t
 
 ### Additional work:
 <ul>
-	<li>!! Make is mobile-responsive!!</li><ol>
+	<li>!! Make it not mobile-responsive!!</li><ol>
 		<li> add event listeners for touch</li>
 	</ol>
 	<li> Retouch up the design </li>
@@ -35,6 +35,9 @@ There are a lot of things to do to make this project even better. I've divided t
 		<li> keep track of number of wins/ rounds</li>
 		</ol>
 	</li>
+	<li> Make a footer</li><ol>
+		<li> center it, add a Made by bolded name</li>
+	</ol>
 </ul>
 
 
