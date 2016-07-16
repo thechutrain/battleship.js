@@ -30,8 +30,9 @@ There are a lot of things to do to make this project even better. I've divided t
 		<li> freeze button clicking </li>
 	</ol></li>
 
-	<li>Add user data to the game <ol>
-		<li> keep tracks of number of guess </li>
+	<li><strike>Add user data to the game </strike><ol>
+		<li> <strike>keep tracks of number of guess </strike></li>
+		<li> <strike>keep tracks users accuracy </strike></li>
 		<li> keep track of number of wins/ rounds</li>
 		</ol>
 	</li>
