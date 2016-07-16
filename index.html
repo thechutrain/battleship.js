@@ -3,22 +3,22 @@
     <head>
         <meta charset="utf-8">
         <title> Battleship </title>
-        <link rel="stylesheet" href="css/normalize.css"> 
         <link rel="stylesheet" href="css/styles.css"> 
     </head>
 <body>
 <div class="header">
 <h1>Welcome to Battleship!</h1>
 <p> A browser-based take on classic boardgame known as battleship.</p>
-        <div id="model"><p>This should be hidden, please turn CSS back on for a better experience</p>
-            <div id="player1_wins" data-player1-wins='0'></div>
+        <div id="model" class="hidden"><p>This should be hidden, please turn CSS back on for a better experience</p>
+            <div id="shots-fired" data-shots-fired="0"></div>
+            <!-- <div id="player1_wins" data-player1-wins='0'></div> -->
  <!--            <div id="player2_wins" data-player2-wins='0'></div> -->
         </div>
 </div>
 
 <div class="container">
-    <div class="aside-wrapper">
-        <div class="aside-left" id="game-status"><h2> Enemy Ships: </h2>
+    <div class="aside-wrapper aside-left">
+        <div id="game-status"><h2> Enemy Ships: </h2>
         <div id="boat-list">
             <div class="boat" id="patrol">Patrol Boat</div>
             <div class="boat" id="submarine">Submarine</div>
@@ -26,6 +26,20 @@
             <div class="boat" id="destroyer">Destroyer</div>
             <div class="boat" id="carrier">Aircraft Carrier</div>
         </div>
+        </div>
+
+        <div class="user-stats">
+            <h2>User Stats </h2>
+            <div class="stat-wrapper">
+                <p>Shots fired: <span id="shots-fired" class="stat" data-shots-fired="0">0</span></p>
+            </div>
+            <div class="stat-wrapper hidden">
+                <p>Misses: <span id="misses" class="stat" data-misses="5">5</span></p>
+            </div>
+            <div class="stat-wrapper">
+                <p>Your accuracy: <span id="accuracy" class="stat" data-shots-fired="100">--</span>%</p>
+            </div>
+
         </div>
     </div>
 
@@ -152,9 +166,9 @@
 </div>
 
 
-<div class="footer">
-    <p>copyright Alan Chew</p>
-</div>
+<footer>
+    <p> &#169 This was made by <a href="https://thechutrain.github.io/">Alan Chu </a></p>
+</footer>
 
 <script src="js/jquery-3.0.0.min.js"></script>
 <script src="js/application.js"></script>

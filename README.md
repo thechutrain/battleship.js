@@ -36,8 +36,8 @@ There are a lot of things to do to make this project even better. I've divided t
 		<li> keep track of number of wins/ rounds</li>
 		</ol>
 	</li>
-	<li> Make a footer</li><ol>
-		<li> center it, add a Made by bolded name</li>
+	<li><strike>Make a footer</strike></li><ol>
+		<li><strike>center it, add a Made by bolded name</strike></li>
 	</ol>
 </ul>
 
@@ -49,8 +49,7 @@ There are a lot of things to do to make this project even better. I've divided t
 
 ## Authors
 
-* **Alan Chu** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
+* **Alan Chu** - *Initial work* - 
 
 ## Acknowledgments
 
