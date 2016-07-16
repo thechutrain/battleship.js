@@ -59,6 +59,8 @@ var model = {
 	invalid_locations: [], // array of all the locations that made ships have
 	board_height: 10,
 	board_width: 10,
+	shots_fired: 0,
+	number_hits: 0,
 
 	// Methods
 	initializeGame: function(){
@@ -68,9 +70,16 @@ var model = {
 		$(".hit").removeClass("hit");
 		$(".sunk").removeClass("sunk");
 
+	// CLEAR STATS:
+		var stats = $(".user-stats");
+		stats.find("#shots-fired").text("0");
+		stats.find("#accuracy").text("--");
+
 	// clear the model variables:
 		model.ship_container = [];
 		model.invalid_locations = [];
+		model.shots_fired = 0;
+		model.number_hits = 0;
 		// starts new game:
 		var boats_to_make = [[2, "patrol"], [3,"submarine"], [3, "destroyer"], [4, "battleship"], [5, "carrier"]];
 		for (var i = 0; i < boats_to_make.length; i++) {
@@ -257,6 +266,10 @@ var controller = {
 			alert("You already won!");
 
 		} else{
+			// UPDATE STATS
+			model.shots_fired += 1;
+
+
 			var guess_x = location[0];
 			var guess_y = location[1];
 			var hit = false;
@@ -282,7 +295,13 @@ var controller = {
 			if (hit){
 				// cell.addClass("hit");
 				view.displayHit([guess_x, guess_y]);
+
+				// update stats:
+				model.number_hits +=1;
 			} else {
+				// update stats:
+				model.miss +=1;
+
 				if (cell.hasClass("miss")){
 					alert("That was already a miss!");
 				} else{
@@ -299,6 +318,14 @@ var controller = {
 				alert("You won!");
 
 			} 
+
+			// UPDATE STATS:
+			var stats = $(".user-stats");
+			stats.find("#shots-fired").text(model.shots_fired.toString());
+			var accuracy = Math.round((model.number_hits / model.shots_fired) * 100);
+			stats.find("#accuracy").text(accuracy.toString());
+
+
 		} // closes the else statement
 
 	}, 
