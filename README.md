@@ -25,8 +25,8 @@ There are a lot of things to do to make this project even better. I've divided t
 		<li> add event listeners for touch</li>
 	</ol>
 	<li> Retouch up the design </li>
-	<li>write a game over function <ol>
-		<li> alert user when all ships are sunk </li>
+	<li><strike>write a game over function </strike><ol>
+		<li><strike> alert user when all ships are sunk </strike></li>
 		<li> freeze button clicking </li>
 	</ol></li>
 

@@ -76,6 +76,7 @@ body{
 
 #new_game:hover{
     background-color: goldenrod;
+    cursor: pointer;
 }
 
 
