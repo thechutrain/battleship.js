@@ -6,7 +6,7 @@ $(document).ready(function(){
 // event listener for the new game button
 	// $("button").on('click', "#new_game", model.initializeGame);
 	$(".button-wrapper").on('click', "#new_game", model.initializeGame);
-	$(".button-wrapper").on('tap', "#new_game", model.initializeGame);
+	// $(".button-wrapper").on('tap', "#new_game", model.initializeGame);
 
 // testing
 	// var game_status = model.gameOver();
@@ -260,13 +260,13 @@ var controller = {
 					
 		})
 
-		$(".grid-container").on("tap", ".grid-cell", function(){
-			var cell = $(this);
-			var guess_location = [cell.data("x"), cell.data("y")];
-			// alert(fire_location);
-			controller.fire(guess_location, cell);
+		// $(".grid-container").on("tap", ".grid-cell", function(){
+		// 	var cell = $(this);
+		// 	var guess_location = [cell.data("x"), cell.data("y")];
+		// 	// alert(fire_location);
+		// 	controller.fire(guess_location, cell);
 					
-		})
+		// })
 	},
 
 	fire: function(location, cell){
